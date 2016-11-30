@@ -1,0 +1,101 @@
+.menu-primary-container {
+  font-family: $FONT_ACCENT;
+  text-transform: uppercase;
+  position: fixed;
+  height: 100%;
+  overflow: visible;
+  top: 0;
+  left: -300px;
+  z-index: 100;
+
+  &.isOpen {
+    left: 0;
+  }
+}
+
+.menu-primary {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  background: $COLOR_GREEN;
+  padding-top: 10px;
+
+  > li {
+    > a {
+      padding: 10px 25px;
+      display: block;
+      color: $COLOR_OFF_WHITE;
+      font-size: 25px;
+
+      &:hover {
+        text-decoration: none;
+        color: $COLOR_TEXT;
+      }
+    }
+  }
+}
+
+.hamburger {
+  display: block;
+  height: 50px;
+  width: 50px;
+  background: $COLOR_GREEN;
+  z-index: 50;
+  position: relative;
+  left: 300px;
+  padding-top: 5px;
+  cursor: pointer;
+  border-radius: 0 0 10px 0;
+
+  .hamburger-line {
+    display: block;
+    background: #fefcea;
+    height: 5px;
+    width: 65%;
+    margin: 6px 8px;
+    border-radius: 5px;
+  }
+}
+
+@include breakpoint(LG) {
+  .site-header {
+    width: 100%;
+    border-top: 1px solid $COLOR_TEXT;
+    border-bottom: 1px solid $COLOR_TEXT;
+    margin-top: 25px;
+    position: absolute;
+  }
+
+  .menu-primary-container {
+    position: static;
+  }
+
+  .menu-primary {
+    position: relative;
+    background: transparent;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0;
+
+    > li {
+      display: inline-block;
+
+      > a {
+        display: inline;
+        color: $COLOR_TEXT;
+        font-size: inherit;
+        &:hover {
+          color: $COLOR_ORANGE;
+        }
+      }
+
+      &:not(:last-child) {
+        &:after {
+          content: url('../media/images/menu-spacer.png');
+        }
+      }
+    }
+  }
+}
