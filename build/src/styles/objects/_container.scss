@@ -7,4 +7,7 @@
 .container-site {
   min-height:100%;
   position:relative;
+  background: lighten($COLOR_OFF_WHITE, 10%);
+  border-left: 1px solid hslac($COLOR_BLUE, 0.5);
+  border-right: 1px solid hslac($COLOR_BLUE, 0.5);
 }

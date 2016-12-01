@@ -47,7 +47,7 @@
 
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class(); ?>>
-        <div class="container-site">
+    <body <?php body_class('box-mobile'); ?>>
+        <div class="container-site container">
             <?php get_template_part('partials/globals/site', 'header'); ?>
             <div class="site-bd container">

@@ -14,12 +14,20 @@ body {
   color: $COLOR_TEXT;
   //background-color: $COLOR_OFF_WHITE;
   -webkit-font-smoothing: antialiased;
-  background: repeating-linear-gradient(
-                  to right,
-                  $COLOR_OFF_WHITE,
-                  $COLOR_OFF_WHITE 10px,
-                  $COLOR_STRIPE 10px,
-                  $COLOR_STRIPE 20px
+  background-color: hsl(34, 53%, 82%);
+  background-image: repeating-linear-gradient(45deg, transparent 5px, hslac($COLOR_BLUE, 0.5) 5px, hslac($COLOR_BLUE, 0.5) 10px,
+          hslac($COLOR_PINK, 0) 10px, hslac($COLOR_PINK, 0) 35px, hslac($COLOR_PINK, 0.5) 35px, hslac($COLOR_PINK, 0.5) 40px,
+          hslac($COLOR_BLUE, 0.5) 40px, hslac($COLOR_BLUE, 0.5) 50px, hslac($COLOR_BLUE, 0) 50px, hslac($COLOR_BLUE, 0) 60px,
+          hslac($COLOR_PINK, 0.5) 60px, hslac($COLOR_PINK, 0.5) 70px, hslac($COLOR_YELLOW, 0.5) 70px, hslac($COLOR_YELLOW, 0.5) 80px,
+          hslac($COLOR_YELLOW, 0) 80px, hslac($COLOR_YELLOW, 0) 90px, hslac($COLOR_PINK, 0.5) 90px, hslac($COLOR_PINK, 0.5) 110px,
+          hslac($COLOR_PINK, 0) 110px, hslac($COLOR_PINK, 0) 120px, hslac($COLOR_BLUE, 0.5) 120px, hslac($COLOR_BLUE, 0.5) 140px
+  ),
+  repeating-linear-gradient(135deg, transparent 5px, hslac($COLOR_BLUE, 0.5) 5px, hslac($COLOR_BLUE, 0.5) 10px,
+                  hslac($COLOR_PINK, 0) 10px, hslac($COLOR_PINK, 0) 35px, hslac($COLOR_PINK, 0.5) 35px, hslac($COLOR_PINK, 0.5) 40px,
+                  hslac($COLOR_BLUE, 0.5) 40px, hslac($COLOR_BLUE, 0.5) 50px, hslac($COLOR_BLUE, 0) 50px, hslac($COLOR_BLUE, 0) 60px,
+                  hslac($COLOR_PINK, 0.5) 60px, hslac($COLOR_PINK, 0.5) 70px, hslac($COLOR_YELLOW, 0.5) 70px, hslac($COLOR_YELLOW, 0.5) 80px,
+                  hslac($COLOR_YELLOW, 0) 80px, hslac($COLOR_YELLOW, 0) 90px, hslac($COLOR_PINK, 0.5) 90px, hslac($COLOR_PINK, 0.5) 110px,
+                  hslac($COLOR_PINK, 0) 110px, hslac($COLOR_PINK, 0) 140px, hslac($COLOR_BLUE, 0.5) 140px, hslac($COLOR_BLUE, 0.5) 160px
   );
   margin:0;
   padding:0;
@@ -38,7 +46,7 @@ body.isTransitioning {
 }
 
 a {
-  color: $COLOR_ORANGE;
+  //color: $COLOR_ORANGE;
   text-decoration: none;
   cursor: pointer;
   &:hover {
@@ -120,5 +128,5 @@ hr {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $COLOR_GREEN;
+  //color: $COLOR_GREEN;
 }

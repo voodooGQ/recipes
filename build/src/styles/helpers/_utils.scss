@@ -28,3 +28,12 @@
     clear: both;
   }
 }
+
+@function hslac($color, $alpha) {
+  @if(type-of($color) == "color") {
+    @return hsla(hue($color), saturation($color), lightness($color), $alpha);
+  }
+  @else {
+    @error "You didn't pass a color object";
+  }
+}
