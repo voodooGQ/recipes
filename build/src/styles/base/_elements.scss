@@ -15,19 +15,19 @@ body {
   //background-color: $COLOR_OFF_WHITE;
   -webkit-font-smoothing: antialiased;
   background-color: hsl(34, 53%, 82%);
-  background-image: repeating-linear-gradient(45deg, transparent 5px, hslac($COLOR_BLUE, 0.5) 5px, hslac($COLOR_BLUE, 0.5) 10px,
-          hslac($COLOR_PINK, 0) 10px, hslac($COLOR_PINK, 0) 35px, hslac($COLOR_PINK, 0.5) 35px, hslac($COLOR_PINK, 0.5) 40px,
-          hslac($COLOR_BLUE, 0.5) 40px, hslac($COLOR_BLUE, 0.5) 50px, hslac($COLOR_BLUE, 0) 50px, hslac($COLOR_BLUE, 0) 60px,
-          hslac($COLOR_PINK, 0.5) 60px, hslac($COLOR_PINK, 0.5) 70px, hslac($COLOR_YELLOW, 0.5) 70px, hslac($COLOR_YELLOW, 0.5) 80px,
-          hslac($COLOR_YELLOW, 0) 80px, hslac($COLOR_YELLOW, 0) 90px, hslac($COLOR_PINK, 0.5) 90px, hslac($COLOR_PINK, 0.5) 110px,
-          hslac($COLOR_PINK, 0) 110px, hslac($COLOR_PINK, 0) 120px, hslac($COLOR_BLUE, 0.5) 120px, hslac($COLOR_BLUE, 0.5) 140px
+  background-image: repeating-linear-gradient(45deg, transparent 5px, hslac($COLOR_BLUE, 0.30) 5px, hslac($COLOR_BLUE, 0.30) 10px,
+          hslac($COLOR_PINK, 0) 10px, hslac($COLOR_PINK, 0) 35px, hslac($COLOR_PINK, 0.30) 35px, hslac($COLOR_PINK, 0.30) 40px,
+          hslac($COLOR_BLUE, 0.30) 40px, hslac($COLOR_BLUE, 0.30) 50px, hslac($COLOR_BLUE, 0) 50px, hslac($COLOR_BLUE, 0) 60px,
+          hslac($COLOR_PINK, 0.30) 60px, hslac($COLOR_PINK, 0.30) 70px, hslac($COLOR_YELLOW, 0.30) 70px, hslac($COLOR_YELLOW, 0.30) 80px,
+          hslac($COLOR_YELLOW, 0) 80px, hslac($COLOR_YELLOW, 0) 90px, hslac($COLOR_PINK, 0.30) 90px, hslac($COLOR_PINK, 0.30) 110px,
+          hslac($COLOR_PINK, 0) 110px, hslac($COLOR_PINK, 0) 120px, hslac($COLOR_BLUE, 0.30) 120px, hslac($COLOR_BLUE, 0.30) 140px
   ),
-  repeating-linear-gradient(135deg, transparent 5px, hslac($COLOR_BLUE, 0.5) 5px, hslac($COLOR_BLUE, 0.5) 10px,
-                  hslac($COLOR_PINK, 0) 10px, hslac($COLOR_PINK, 0) 35px, hslac($COLOR_PINK, 0.5) 35px, hslac($COLOR_PINK, 0.5) 40px,
-                  hslac($COLOR_BLUE, 0.5) 40px, hslac($COLOR_BLUE, 0.5) 50px, hslac($COLOR_BLUE, 0) 50px, hslac($COLOR_BLUE, 0) 60px,
-                  hslac($COLOR_PINK, 0.5) 60px, hslac($COLOR_PINK, 0.5) 70px, hslac($COLOR_YELLOW, 0.5) 70px, hslac($COLOR_YELLOW, 0.5) 80px,
-                  hslac($COLOR_YELLOW, 0) 80px, hslac($COLOR_YELLOW, 0) 90px, hslac($COLOR_PINK, 0.5) 90px, hslac($COLOR_PINK, 0.5) 110px,
-                  hslac($COLOR_PINK, 0) 110px, hslac($COLOR_PINK, 0) 140px, hslac($COLOR_BLUE, 0.5) 140px, hslac($COLOR_BLUE, 0.5) 160px
+  repeating-linear-gradient(135deg, transparent 5px, hslac($COLOR_BLUE, 0.30) 5px, hslac($COLOR_BLUE, 0.30) 10px,
+                  hslac($COLOR_PINK, 0) 10px, hslac($COLOR_PINK, 0) 35px, hslac($COLOR_PINK, 0.30) 35px, hslac($COLOR_PINK, 0.30) 40px,
+                  hslac($COLOR_BLUE, 0.30) 40px, hslac($COLOR_BLUE, 0.30) 50px, hslac($COLOR_BLUE, 0) 50px, hslac($COLOR_BLUE, 0) 60px,
+                  hslac($COLOR_PINK, 0.30) 60px, hslac($COLOR_PINK, 0.30) 70px, hslac($COLOR_YELLOW, 0.30) 70px, hslac($COLOR_YELLOW, 0.30) 80px,
+                  hslac($COLOR_YELLOW, 0) 80px, hslac($COLOR_YELLOW, 0) 90px, hslac($COLOR_PINK, 0.30) 90px, hslac($COLOR_PINK, 0.30) 110px,
+                  hslac($COLOR_PINK, 0) 110px, hslac($COLOR_PINK, 0) 140px, hslac($COLOR_BLUE, 0.30) 140px, hslac($COLOR_BLUE, 0.30) 160px
   );
   background-repeat: no-repeat;
   background-attachment: fixed;

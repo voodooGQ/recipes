@@ -14,10 +14,11 @@
 
     li {
       a {
+        font-family: $FONT_ACCENT;
+        text-transform: uppercase;
         display: block;
         padding: 10px;
         color: $COLOR_OFF_WHITE;
-        font-weight: bold;
         text-decoration: none;
         &:first-child {
           padding-top: 0;
