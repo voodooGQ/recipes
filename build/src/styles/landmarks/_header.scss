@@ -1,99 +1,70 @@
 .menu-primary-container {
-  font-family: $FONT_ACCENT;
-  text-transform: uppercase;
+  padding: 0 5px;
   position: fixed;
-  height: 100%;
-  overflow: visible;
-  top: 0;
-  left: -300px;
-  z-index: 100;
+  width: 100%;
+  left: 0;
+  top: -$MOBILE_MENU_HEIGHT;
+  z-index: 30;
 
-  &.isOpen {
-    left: 0;
-  }
-}
+  .menu-primary {
+    width: 100%;
+    background: $COLOR_PINK;
+    padding: 10px 0;
+    height: $MOBILE_MENU_HEIGHT;
 
-.menu-primary {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 300px;
-  background: $COLOR_GREEN;
-  padding-top: 10px;
-
-  > li {
-    > a {
-      padding: 10px 25px;
-      display: block;
-      color: $COLOR_OFF_WHITE;
-      font-size: 25px;
-
-      &:hover {
+    li {
+      a {
+        display: block;
+        padding: 10px;
+        color: $COLOR_OFF_WHITE;
+        font-weight: bold;
         text-decoration: none;
-        color: $COLOR_TEXT;
+        &:first-child {
+          padding-top: 0;
+        }
       }
+    }
+  }
+
+  .mobile-menu-trigger {
+    background: $COLOR_PINK;
+    height: 25px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 10px 0 10px;
+    cursor: pointer;
+
+    .mobile-menu-line {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: hslac($COLOR_OFF_WHITE, 0.25);
+      margin-bottom: 4px;
+      border-radius: 5px;
     }
   }
 }
 
-.hamburger {
-  display: block;
-  height: 50px;
-  width: 50px;
-  background: $COLOR_GREEN;
-  z-index: 50;
-  position: relative;
-  left: 300px;
-  padding-top: 5px;
-  cursor: pointer;
-  border-radius: 0 0 10px 0;
-
-  .hamburger-line {
-    display: block;
-    background: #fefcea;
-    height: 5px;
-    width: 65%;
-    margin: 6px 8px;
-    border-radius: 5px;
-  }
-}
-
 @include breakpoint(LG) {
-  .site-header {
-    width: 100%;
-    border-top: 1px solid $COLOR_TEXT;
-    border-bottom: 1px solid $COLOR_TEXT;
-    margin-top: 25px;
-    position: absolute;
-  }
-
   .menu-primary-container {
-    position: static;
-  }
+    position: inherit;
+    padding: 0 20px;
 
-  .menu-primary {
-    position: relative;
-    background: transparent;
-    width: auto;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 0;
+    .menu-primary {
+      height: auto;
+      text-align: center;
+      background: none;
+      border-bottom: 1px solid hslac($COLOR_BLUE, 0.15);
 
-    > li {
-      display: inline-block;
-
-      > a {
-        display: inline;
-        color: $COLOR_TEXT;
-        font-size: inherit;
-        &:hover {
-          color: $COLOR_ORANGE;
-        }
-      }
-
-      &:not(:last-child) {
-        &:after {
-          content: url('../media/images/menu-spacer.png');
+      li {
+        display: inline-block;
+        a {
+          color: $COLOR_PINK;
+          padding: 0 10px;
+          &:hover {
+            color: darken($COLOR_PINK, 25%);
+          }
         }
       }
     }

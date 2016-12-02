@@ -41,7 +41,7 @@ var IS_OPEN_SELECTOR = 'isOpen';
  * @type {string}
  * @since 1.0
  */
-var CLOSED_PIXEL_VALUE = '-300';
+var CLOSED_PIXEL_VALUE = '-200';
 
 /**
  * The Mobile Menu Constructor
@@ -154,7 +154,7 @@ proto.onClick = function($event) {
     this.disable();
 
     this.$element.animate({
-        'left' : pixelValue + 'px'
+        'top' : pixelValue + 'px'
     }, this.animationSpeed, function() {
         self.toggleOpenClass().enable();
     });

@@ -2,15 +2,15 @@
 'use strict';
 
 window.$ = window.jQuery = require('jquery');
-var slick = require('../vendor/slick-carousel/slick/slick');
+// var slick = require('../vendor/slick-carousel/slick/slick');
 var MobileMenuView = require('./views/MobileMenu');
 
-var MobileMenu = new MobileMenuView($('.js-mobileMenu'));
+var MobileMenu = new MobileMenuView($('.js-mobileMenu'), 500);
 
-$(".carousel").slick({
-    infinite: true,
-    autoplay: true,
-    prevArrow: false,
-    nextArrow: false,
-    speed: 800,
-});
+// $(".carousel").slick({
+//     infinite: true,
+//     autoplay: true,
+//     prevArrow: false,
+//     nextArrow: false,
+//     speed: 800,
+// });

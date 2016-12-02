@@ -3,7 +3,7 @@
 }
 
 .box-mobile {
-  padding: 0 10px;
+  padding: 0 5px;
   @include breakpoint(LG) {
     padding: 0;
   }
