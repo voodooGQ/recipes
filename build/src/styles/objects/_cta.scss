@@ -1,5 +1,5 @@
 .cta {
-  background: $COLOR_GREEN;
+  background: $COLOR_BLUE;
   display: block;
   padding: 10px;
   width: 100%;
@@ -9,7 +9,7 @@
   color: $COLOR_OFF_WHITE;
   font-size: 25px;
   font-family: $FONT_ACCENT;
-  text-shadow: -1px 0 $COLOR_GREEN, 0 1px $COLOR_GREEN, 1px 0 $COLOR_GREEN, 0 -1px $COLOR_GREEN;
+  text-shadow: -1px 0 $COLOR_BLUE, 0 1px $COLOR_BLUE, 1px 0 $COLOR_BLUE, 0 -1px $COLOR_BLUE;
 
   &:hover {
     text-decoration: none;

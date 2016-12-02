@@ -1,7 +1,7 @@
 .icon {
   @extend .fa;
   color: $COLOR_OFF_WHITE;
-  background: $COLOR_GREEN;
+  background: $COLOR_BLUE;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -12,7 +12,7 @@
   -ms-transition: background-color 500ms linear;
   transition: background-color 500ms linear;
   &:hover {
-    background: $COLOR_ORANGE;
+    background: $COLOR_PINK;
   }
 }
 

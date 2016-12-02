@@ -2,7 +2,7 @@
   width: 100%;
   margin: 0 auto;
   font-size: 16px;
-  border: 1px solid $COLOR_GREEN;
+  border: 1px solid $COLOR_BLUE;
   font-family: $FONT_ACCENT;
 
   li {
@@ -11,7 +11,7 @@
   }
 
   li:nth-child(even) {
-    background: $COLOR_GREEN;
+    background: $COLOR_BLUE;
   }
 
   li:nth-child(odd) {

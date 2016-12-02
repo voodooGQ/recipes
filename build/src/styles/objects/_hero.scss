@@ -3,11 +3,11 @@
   overflow: hidden;
 
   img {
-    border-top: 1px solid $COLOR_GREEN;
-    border-bottom: 1px solid $COLOR_GREEN;
+    border-top: 1px solid $COLOR_BLUE;
+    border-bottom: 1px solid $COLOR_BLUE;
     width: 100%;
     @include breakpoint(LG) {
-      border: 1px solid $COLOR_GREEN;
+      border: 1px solid $COLOR_BLUE;
       border-radius: 5px;
     }
   }
