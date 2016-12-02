@@ -32,13 +32,13 @@ class Header extends MetaParent {
     }
 
     /**
-     * Get the small logo url
+     * Get the logo url
      *
      * @return string
      * @since 1.0
      */
     public function getLogoUrl()
     {
-        return get_template_directory_uri() . '/assets/media/images/logo-small.png';
+        return get_template_directory_uri() . '/assets/media/images/logo.png';
     }
 }

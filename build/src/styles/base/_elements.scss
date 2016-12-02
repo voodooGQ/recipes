@@ -29,9 +29,11 @@ body {
                   hslac($COLOR_YELLOW, 0) 80px, hslac($COLOR_YELLOW, 0) 90px, hslac($COLOR_PINK, 0.5) 90px, hslac($COLOR_PINK, 0.5) 110px,
                   hslac($COLOR_PINK, 0) 110px, hslac($COLOR_PINK, 0) 140px, hslac($COLOR_BLUE, 0.5) 140px, hslac($COLOR_BLUE, 0.5) 160px
   );
-  margin:0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  margin: 0;
   padding:0;
-  height:100%;
 }
 
 body.isOpenNav,
