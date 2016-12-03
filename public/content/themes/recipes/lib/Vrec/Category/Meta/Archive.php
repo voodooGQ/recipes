@@ -18,4 +18,4 @@ use Vrec\Theme\Image;
  * @author  Shane Smith <voodoogq@gmail.com>
  * @since   1.0
  */
-class Meta extends MetaParent {}
+class Archive extends MetaParent {}

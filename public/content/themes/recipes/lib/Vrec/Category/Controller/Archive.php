@@ -18,7 +18,7 @@ use Vrec\Category\Meta\Archive as Meta;
  * @author  Shane Smith <voodoogq@gmail.com>
  * @since   1.0
  */
-class Single implements TwigInterface
+class Archive implements TwigInterface
 {
     /**
      * The twig template name/location
@@ -27,7 +27,7 @@ class Single implements TwigInterface
      * @type string
      * @since 1.0
      */
-    const TWIG_TEMPLATE_NAME = 'recipe/single';
+    const TWIG_TEMPLATE_NAME = 'category/archive';
 
     /**
      * Returns the name of the Twig Template to use
