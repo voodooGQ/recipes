@@ -28,7 +28,7 @@ class Single implements TwigInterface
      * @type string
      * @since 1.0
      */
-    const TWIG_TEMPLATE_NAME = 'service/single';
+    const TWIG_TEMPLATE_NAME = 'recipe/single';
 
     /**
      * Returns the name of the Twig Template to use
@@ -70,6 +70,8 @@ class Single implements TwigInterface
             $twigData['title']                      = $meta->getPostTitle();
             $twigData['permalink']                  = $meta->getPermalink();
             $twigData['content']                    = $meta->getPostContent();
+            $twigData['ingredients']                = $meta->getIngredients();
+            $twigData['instructions']               = $meta->getInstructions();
         }
 
         return $twigData;

@@ -1,12 +1,41 @@
+<h1 class="hdg hdg_1 vr u-center hdg_pink">{{ title|raw }}</h1>
 {% if featured_image_src and featured_image_src_mobile %}
-    <div class="hero vr_half">
+    <div class="hero vr">
         <img class="u-tabletPlus" src="{{ featured_image_src }}" />
         <img class="u-mobile" src="{{ featured_image_src_mobile }}" />
     </div>
 {% endif %}
 <div class="box">
-    <h1 class="hdg hdg_1 vr">{{ title|raw }}</h1>
-    <div class="userContent">
-        {{ content|raw }}
-    </div>
+    {% if ingredients %}
+        <div class="vr">
+            {% for section in ingredients %}
+                {% if section.title %}
+                    <h3 class="hdg hdg_4 vr_half hdg_yellow">For the {{ section.title }}</h3>
+                {% endif %}
+                {% if section.ingredients %}
+                    <ul class="list-ingredients vr">
+                        {% for item in section.ingredients %}
+                            <li>
+                                {{ item.quantity }} {{ item.measurement }} {{ item.ingredient }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <hr class="hr vr" />
+    {% endif %}
+    {% if instructions %}
+        <h2 class="hdg hdg_2 vr hdg_pink">Instructions</h2>
+        {% for section in instructions %}
+            {% if section.title %}
+                <h3 class="hdg hdg_4 vr_half hdg_yellow">For the {{ section.title }}</h3>
+            {% endif %}
+            {% if section.instructions %}
+                <div class="userContent">
+                    {{ section.instructions|raw }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
 </div>

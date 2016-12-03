@@ -1,0 +1,13 @@
+.list-ingredients {
+  list-style-image: url('../media/images/list_dot.png');
+  padding-left: 25px;
+  li {
+    padding-top: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
