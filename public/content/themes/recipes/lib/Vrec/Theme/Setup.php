@@ -205,15 +205,8 @@ class Setup
         // Square
         add_image_size(
             'hero',
-            '1074',
-            '300',
-            true
-        );
-
-        add_image_size(
-            'hero_mobile',
-            '385',
-            '250',
+            '960',
+            '550',
             true
         );
 

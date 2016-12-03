@@ -3,12 +3,7 @@
   overflow: hidden;
 
   img {
-    border-top: 1px solid $COLOR_BLUE;
-    border-bottom: 1px solid $COLOR_BLUE;
+    border: 7px double hslac($COLOR_PINK, 0.75);
     width: 100%;
-    @include breakpoint(LG) {
-      border: 1px solid $COLOR_BLUE;
-      border-radius: 5px;
-    }
   }
 }

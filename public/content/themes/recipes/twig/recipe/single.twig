@@ -1,8 +1,7 @@
 <h1 class="hdg hdg_1 vr u-center hdg_pink">{{ title|raw }}</h1>
-{% if featured_image_src and featured_image_src_mobile %}
+{% if featured_image_src %}
     <div class="hero vr">
-        <img class="u-tabletPlus" src="{{ featured_image_src }}" />
-        <img class="u-mobile" src="{{ featured_image_src_mobile }}" />
+        <img src="{{ featured_image_src }}" />
     </div>
 {% endif %}
 <div class="box">
