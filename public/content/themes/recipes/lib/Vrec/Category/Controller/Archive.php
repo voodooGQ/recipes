@@ -1,16 +1,15 @@
 <?php
 /**
- * Recipe Single Controller
+ * Category Archive Controller
  *
  * @author Shane Smith <voodoogq@gmail.com>
  * @since 1.0
  */
 
-namespace Vrec\Recipe\Controller;
+namespace Vrec\Category\Controller;
 
 use Vrec\Vendor\Twig\TwigInterface;
-use Vrec\Recipe\Meta\Single as Meta;
-use Vrec\Theme\Image as Image;
+use Vrec\Category\Meta\Archive as Meta;
 
 /**
  * Class Single
@@ -63,17 +62,6 @@ class Single implements TwigInterface
 
         if($id) {
             $meta = new Meta($id);
-            $imageMeta = Image::getImageMeta(get_post_thumbnail_id($id));
-            $twigData['featured_image_src']         = $imageMeta['urls']['hero'];
-            $twigData['title']                      = $meta->getPostTitle();
-            $twigData['permalink']                  = $meta->getPermalink();
-            $twigData['content']                    = $meta->getPostContent();
-            $twigData['ingredients']                = $meta->getIngredients();
-            $twigData['instructions']               = $meta->getInstructions();
-            $twigData['original_author']            = array(
-                'name'  =>  $meta->getOriginalAuthor(),
-                'url'   =>  $meta->getOriginalUrl()
-            );
         }
 
         return $twigData;

@@ -31,10 +31,22 @@
                 <h3 class="hdg hdg_4 vr_half hdg_yellow">For the {{ section.title }}</h3>
             {% endif %}
             {% if section.instructions %}
-                <div class="userContent">
+                <div class="userContent vr">
                     {{ section.instructions|raw }}
                 </div>
             {% endif %}
         {% endfor %}
+    {% endif %}
+    {% if original_author %}
+        <div class="author">
+            Original Author:
+            {% if original_author.url %}
+                <a href="{{ original_author.url }}" target="_blank">
+                    {{ original_author.name }}
+                </a>
+            {% elseif original_author.name %}
+                {{ original_author.name }}
+            {% endif %}
+        </div>
     {% endif %}
 </div>

@@ -28,20 +28,20 @@ class Single extends MetaParent {
      * @since 1.0
      */
     var $measurementConversions = array(
-        'teaspoon'      => 'tsp',
-        'tablespoon'    => 'tbl',
+        'teaspoon'      => 'tsp.',
+        'tablespoon'    => 'tbl.',
         'fluid_ounce'   => 'fl oz.',
         'gill'          => 'gill',
         'cup'           => 'cup',
         'pint'          => 'pint',
         'quart'         => 'quart',
         'gallon'        => 'gallon',
-        'milliliter'    => 'ml',
+        'milliliter'    => 'ml.',
         'liter'         => 'liter',
-        'deciliter'     => 'dl',
-        'pound'         => 'lb',
+        'deciliter'     => 'dl.',
+        'pound'         => 'lb.',
         'ounce'         => 'oz.',
-        'milligram'     => 'mg',
+        'milligram'     => 'mg.',
         'gram'          => 'gram',
         'kilogram'      => 'kg',
         'millimeter'    => 'mm',
@@ -105,6 +105,24 @@ class Single extends MetaParent {
     }
 
     /**
+     * Get the original author name
+     *
+     * @return string
+     */
+    public function getOriginalAuthor() {
+        return get_field('original_author');
+    }
+
+    /**
+     * Get the original url for the recipe
+     *
+     * @return string
+     */
+    public function getOriginalUrl() {
+        return get_field('original_url');
+    }
+
+    /**
      * Convert the name of the measurement to the display version and add a plural if appropriate
      *
      * @param number $quantity
@@ -161,3 +179,4 @@ class Single extends MetaParent {
     }
 
 }
+
