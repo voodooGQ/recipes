@@ -48,14 +48,11 @@ class Header implements TwigInterface
      */
     public function getTwigData()
     {
-        global $post;
         $twigData = array();
 
-        if ($post) {
-            $meta = new Meta($post->ID);
-            $twigData['menu'] = $meta->getMenu();
-            $twigData['logo'] = $meta->getLogoUrl();
-        }
+        $meta = new Meta($post->ID);
+        $twigData['menu'] = $meta->getMenu();
+        $twigData['logo'] = $meta->getLogoUrl();
         return $twigData;
     }
 }
