@@ -179,4 +179,3 @@ class Single extends MetaParent {
     }
 
 }
-
