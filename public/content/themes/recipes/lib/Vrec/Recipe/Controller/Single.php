@@ -70,6 +70,12 @@ class Single implements TwigInterface
             $twigData['title']                      = $meta->getPostTitle();
             $twigData['permalink']                  = $meta->getPermalink();
             $twigData['content']                    = $meta->getPostContent();
+            $twigData['ingredients']                = $meta->getIngredients();
+            $twigData['instructions']               = $meta->getInstructions();
+            $twigData['original_author']            = array(
+                'name'  =>  $meta->getOriginalAuthor(),
+                'url'   =>  $meta->getOriginalUrl()
+            );
         }
 
         return $twigData;

@@ -5,8 +5,48 @@
     </div>
 {% endif %}
 <div class="box">
-    <h1 class="hdg hdg_1 vr">{{ title|raw }}</h1>
-    <div class="userContent">
-        {{ content|raw }}
-    </div>
+    {% if ingredients %}
+        <div class="vr">
+            {% for section in ingredients %}
+                {% if section.title %}
+                    <h3 class="hdg hdg_4 vr_half hdg_yellow">For the {{ section.title }}</h3>
+                {% endif %}
+                {% if section.ingredients %}
+                    <ul class="list-ingredients vr">
+                        {% for item in section.ingredients %}
+                            <li>
+                                {{ item.quantity }} {{ item.measurement }} {{ item.ingredient }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <hr class="hr vr" />
+    {% endif %}
+    {% if instructions %}
+        <h2 class="hdg hdg_2 vr hdg_pink">Instructions</h2>
+        {% for section in instructions %}
+            {% if section.title %}
+                <h3 class="hdg hdg_4 vr_half hdg_yellow">For the {{ section.title }}</h3>
+            {% endif %}
+            {% if section.instructions %}
+                <div class="userContent vr">
+                    {{ section.instructions|raw }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% if original_author %}
+        <div class="author">
+            Original Author:
+            {% if original_author.url %}
+                <a href="{{ original_author.url }}" target="_blank">
+                    {{ original_author.name }}
+                </a>
+            {% elseif original_author.name %}
+                {{ original_author.name }}
+            {% endif %}
+        </div>
+    {% endif %}
 </div>
