@@ -49,20 +49,9 @@ class Archive implements TwigInterface
      */
     public function getTwigData($postId = null)
     {
-        global $post;
-        $id = null;
-
-        if(!empty($postId)) {
-            $id = $postId;
-        } else if($post) {
-            $id = $post->ID;
-        }
-
         $twigData = array();
-
-        if($id) {
-            $meta = new Meta($id);
-        }
+        $meta = new Meta();
+        $twigData['recipes'] = $meta->getRecipes();
 
         return $twigData;
     }

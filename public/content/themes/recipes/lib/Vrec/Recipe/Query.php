@@ -24,13 +24,30 @@ class Query {
      */
     public static function allRecipes()
     {
-        $service = Register::getInstance();
+        $recipe = Register::getInstance();
 
         $query = new \WP_Query(array(
-            'post_type'         => $service->getPostTypeSlug(),
+            'post_type'         => $recipe->getPostTypeSlug(),
             'post_status'       => array('publish'),
             'posts_per_page'    => -1,
             'order'             => 'date',
+        ));
+
+        wp_reset_query();
+
+        return $query;
+    }
+
+    public static function recipeByCategory($categoryId)
+    {
+        $recipe = Register::getInstance();
+
+        $query = new \WP_Query(array(
+            'post_type'         => $recipe->getPostTypeSlug(),
+            'post_status'       => array('publish'),
+            'posts_per_page'    => -1,
+            'order'             => 'DESC',
+            'cat'               => $categoryId
         ));
 
         wp_reset_query();
