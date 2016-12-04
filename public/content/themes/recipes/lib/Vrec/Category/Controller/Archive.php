@@ -48,8 +48,6 @@ class Archive implements TwigInterface
      */
     public function getTwigData()
     {
-
-        $twigData = array();
         global $post;
         $id = null;
 
@@ -63,6 +61,8 @@ class Archive implements TwigInterface
 
         if($id) {
             $meta = new Meta($id);
+            $twigData['title']      = $meta->getPostTitle();
+            $twigData['categories'] = $meta->getCategories();
         }
 
         return $twigData;

@@ -1,6 +1,6 @@
 <?php
 /**
- * Category Landing Meta
+ * Category Archive Meta
  *
  * @author Shane Smith <voodoogq@gmail.com>
  * @since 1.0
@@ -8,6 +8,7 @@
 
 namespace Vrec\Category\Meta;
 
+use Vrec\Theme\Image;
 use Vrec\Recipe\Query;
 use Vrec\Recipe\Controller\Single as Recipe;
 
@@ -27,15 +28,9 @@ class Landing {
      */
     var $categoryId = null;
 
-    /**
-     * Archive constructor
-     */
-    public function __construct()
+    public function __construct($categoryId)
     {
-        $category = get_category(
-            get_query_var('cat')
-        );
-        $this->categoryId = $category->cat_ID;
+        $this->categoryId = $categoryId;
     }
 
     /**

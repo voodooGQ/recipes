@@ -38,6 +38,12 @@ class Query {
         return $query;
     }
 
+    /**
+     * Return all recipes by category
+     *
+     * @param integer $categoryId
+     * @return \WP_Query
+     */
     public static function recipeByCategory($categoryId)
     {
         $recipe = Register::getInstance();
@@ -47,6 +53,28 @@ class Query {
             'post_status'       => array('publish'),
             'posts_per_page'    => -1,
             'order'             => 'DESC',
+            'cat'               => $categoryId
+        ));
+
+        wp_reset_query();
+
+        return $query;
+    }
+
+    /**
+     * Return a random recipe by category
+     *
+     * @param integer $categoryId
+     * @return \WP_Query
+     */
+    public static function randomRecipeByCategory($categoryId)
+    {
+        $recipe = Register::getInstance();
+
+        $query = new \WP_Query(array(
+            'post_type'         => $recipe->getPostTypeSlug(),
+            'post_status'       => array('publish'),
+            'posts_per_page'    => 1,
             'cat'               => $categoryId
         ));
 

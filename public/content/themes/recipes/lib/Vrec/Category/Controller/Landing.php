@@ -49,7 +49,11 @@ class Landing implements TwigInterface
     public function getTwigData()
     {
         $twigData = array();
-        $meta = new Meta();
+
+        $category = get_category(
+            get_query_var('cat')
+        );
+        $meta = new Meta($category->cat_ID);
         $twigData['title']      = $meta->getTitle();
         $twigData['recipes']    = $meta->getRecipes();
 
