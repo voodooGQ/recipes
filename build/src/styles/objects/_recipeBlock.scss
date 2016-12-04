@@ -1,0 +1,32 @@
+.recipeBlock {
+  display: block;
+  background: $COLOR_PINK;
+  border: 1px solid darken($COLOR_PINK, 10%);
+  border-radius: 5px;
+  padding: 10px;
+  font-family: $FONT_ACCENT;
+  text-align: center;
+  -webkit-transition: all .5s ease-in-out;
+  min-height: 280px;
+
+  img {
+    border: 1px solid darken($COLOR_PINK, 10%);
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .recipeBlock_title {
+    color: lighten($COLOR_OFF_WHITE, 10%);
+    text-transform: uppercase;
+    -webkit-transition: all .5s ease-in-out;
+  }
+
+  &:hover {
+    background: darken($COLOR_PINK, 10%);
+
+    .recipeBlock_title {
+      color: $COLOR_OFF_WHITE;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 .site-footer {
   font-family: $FONT_ACCENT;
-  color: $COLOR_OFF_WHITE;
+  color: lighten($COLOR_OFF_WHITE, 10%);
   background: $COLOR_PINK;
   height: $DESKTOP_FOOTER_HEIGHT;
   width: 100%;

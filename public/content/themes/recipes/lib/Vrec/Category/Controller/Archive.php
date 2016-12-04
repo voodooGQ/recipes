@@ -43,15 +43,15 @@ class Archive implements TwigInterface
     /**
      * Returns the data for Twig
      *
-     * @param int $postId
      * @return array
      * @since 1.0
      */
-    public function getTwigData($postId = null)
+    public function getTwigData()
     {
         $twigData = array();
         $meta = new Meta();
-        $twigData['recipes'] = $meta->getRecipes();
+        $twigData['title']      = $meta->getTitle();
+        $twigData['recipes']    = $meta->getRecipes();
 
         return $twigData;
     }

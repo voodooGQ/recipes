@@ -1,1 +1,13 @@
-<div>TEST</div>
+<div class="box">
+    <h1 class="hdg hdg_1 vr">{{ title|raw }}</h1>
+    <ul class="blocks blocks_3up">
+        {% for recipe in recipes %}
+            <li>
+                <a class="recipeBlock" href="{{ recipe.permalink }}">
+                    <img src="{{ recipe.featured_image_cta }}" />
+                    <span class="recipeBlock_title">{{ recipe.title|raw }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

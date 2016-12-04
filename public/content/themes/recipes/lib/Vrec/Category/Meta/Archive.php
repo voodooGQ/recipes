@@ -33,12 +33,26 @@ class Archive {
      */
     public function __construct()
     {
-        $categories = get_the_category();
-        $this->categoryId = $categories[0]->cat_ID;
+        $category = get_category(
+            get_query_var('cat')
+        );
+        $this->categoryId = $category->cat_ID;
     }
 
     /**
-     * Return the recipes for the category
+     * Get the Category Title
+     *
+     * @return string
+     */
+    public function getTitle()
+    {
+        return get_cat_name($this->categoryId);
+    }
+
+    /**
+     * Return the recipes for the current category
+     *
+     * @return array
      */
     public function getRecipes()
     {
