@@ -1,6 +1,6 @@
 <?php
 /**
- * Category List Controller
+ * Category Landing Controller
  *
  * @author Shane Smith <voodoogq@gmail.com>
  * @since 1.0
@@ -9,16 +9,16 @@
 namespace Vrec\Category\Controller;
 
 use Vrec\Vendor\Twig\TwigInterface;
-use Vrec\Category\Meta\Archive as Meta;
+use Vrec\Category\Meta\Landing as Meta;
 
 /**
- * Class Single
+ * Class Landing
  *
  * @package Vrec\Category\Controller;
  * @author  Shane Smith <voodoogq@gmail.com>
  * @since   1.0
  */
-class Archive implements TwigInterface
+class Landing implements TwigInterface
 {
     /**
      * The twig template name/location
@@ -27,7 +27,7 @@ class Archive implements TwigInterface
      * @type string
      * @since 1.0
      */
-    const TWIG_TEMPLATE_NAME = 'category/archive';
+    const TWIG_TEMPLATE_NAME = 'category/landing';
 
     /**
      * Returns the name of the Twig Template to use
@@ -48,22 +48,10 @@ class Archive implements TwigInterface
      */
     public function getTwigData()
     {
-
         $twigData = array();
-        global $post;
-        $id = null;
-
-        if(!empty($postId)) {
-            $id = $postId;
-        } else if($post) {
-            $id = $post->ID;
-        }
-
-        $twigData = array();
-
-        if($id) {
-            $meta = new Meta($id);
-        }
+        $meta = new Meta();
+        $twigData['title']      = $meta->getTitle();
+        $twigData['recipes']    = $meta->getRecipes();
 
         return $twigData;
     }

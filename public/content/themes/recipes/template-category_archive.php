@@ -1,13 +1,13 @@
 <?php
 /**
- * Archive Service Template
+ * Category ArchiveTemplate
  *
  * @author Shane Smith <voodoogq@gmail.com>
  * @since 1.0
  */
-/* Template Name: Service Archive */
+/* Template Name: Category Archive */
 
-use Vrec\Recipe\Controller\Archive as Controller;
+use Vrec\Category\Controller\Archive as Controller;
 use Vrec\Vendor\Twig\Template;
 
 get_header();

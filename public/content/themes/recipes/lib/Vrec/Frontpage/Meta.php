@@ -9,7 +9,6 @@
 namespace Vrec\Frontpage;
 
 use Vrec\Theme\MetaParent;
-use Vrec\Theme\Image;
 
 /**
  * Class Meta

@@ -6,7 +6,7 @@
  * @since 1.0
  */
 
-use Vrec\Category\Controller\Archive as Controller;
+use Vrec\Category\Controller\Landing as Controller;
 use Vrec\Vendor\Twig\Template;
 
 get_header();
