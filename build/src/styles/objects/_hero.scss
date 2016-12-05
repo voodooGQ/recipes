@@ -3,7 +3,8 @@
   overflow: hidden;
 
   img {
-    border: 7px double hslac($COLOR_PINK, 0.75);
+    border: 10px solid hslac($COLOR_PINK, 0.75);
+    border-radius: 5px;
     width: 100%;
   }
 }

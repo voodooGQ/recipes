@@ -39,7 +39,7 @@ class Register extends PostParent
         $this->pluralName = 'Recipes';
         $this->menuIcon = 'dashicons-carrot';
         $this->supports = array('title', 'editor', 'thumbnail');
-        $this->taxonomies = array('category');
+        $this->taxonomies = array('category', 'post_tag');
         parent::__construct();
     }
 

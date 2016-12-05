@@ -65,7 +65,7 @@ class Single implements TwigInterface
             $meta = new Meta($id);
             $imageMeta = Image::getImageMeta(get_post_thumbnail_id($id));
             $twigData['featured_image_src']         = $imageMeta['urls']['hero'];
-            $twigData['featured_image_cta']      = $imageMeta['urls']['cta'];
+            $twigData['featured_image_cta']         = $imageMeta['urls']['cta'];
             $twigData['title']                      = $meta->getPostTitle();
             $twigData['permalink']                  = $meta->getPermalink();
             $twigData['content']                    = $meta->getPostContent();
@@ -75,6 +75,12 @@ class Single implements TwigInterface
                 'name'  =>  $meta->getOriginalAuthor(),
                 'url'   =>  $meta->getOriginalUrl()
             );
+            $twigData['prep_time']                  = $meta->getPrepTime();
+            $twigData['inactive_time']              = $meta->getInactiveTime();
+            $twigData['cook_time']                  = $meta->getCookTime();
+            $twigData['total_time']                 = $meta->getTotalTime();
+            $twigData['yield']                      = $meta->getYield();
+
         }
 
         return $twigData;
