@@ -1,9 +1,9 @@
-# Website for NicoleSippolaMassage.com
+# Website for Recipe Box
 Authored by [Shane Smith](https://github.com/voodooGQ) 
 
 ## Setup
 
-1. Add `192.168.56.183  nisi.dev www.nisi.dev` to your `/etc/hosts` file
+1. Add `192.168.56.184 recipes.dev www.recipes.dev` to your `/etc/hosts` file
 1. From the repository root: `cp public/wp-config.dist.php public/wp-config.php`
 1. `cp public/.htaccess.dist public/.htaccess`
 1. `cd build`
@@ -15,4 +15,4 @@ Authored by [Shane Smith](https://github.com/voodooGQ)
 1. `vagrant ssh`
 1. Following commands are from the vagrant ssh root: `cd /var/www`
 1. `composer install`
-1. Visit `nisi.dev` in your browser
+1. Visit `recipes.dev` in your browser
