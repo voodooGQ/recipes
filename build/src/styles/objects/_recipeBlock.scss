@@ -16,7 +16,7 @@
     width: 100%;
   }
 
-  .recipeBlock_title {
+  .recipeBlock-title {
     color: lighten($COLOR_OFF_WHITE, 10%);
     text-transform: uppercase;
     -webkit-transition: all .5s ease-in-out;
@@ -27,6 +27,33 @@
 
     .recipeBlock_title {
       color: $COLOR_OFF_WHITE;
+    }
+  }
+
+  .recipeBlock-meta {
+    color: lighten($COLOR_OFF_WHITE, 10%);
+    font-family: $FONT;
+    p {
+      font-weight: bold;
+    }
+
+    .recipeBlock-meta_left, .recipeBlock-meta_right {
+      padding-bottom: 10px;
+    }
+
+    @include breakpoint(MD) {
+      font-size: 12px;
+    }
+
+    @include breakpoint(LG) {
+      text-align: left;
+      .recipeBlock-meta_left {
+        padding-bottom: 0;
+      }
+
+      .recipeBlock-meta_right {
+        text-align: right;
+      }
     }
   }
 }

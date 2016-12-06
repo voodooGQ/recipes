@@ -84,4 +84,8 @@ $COLUMN_COUNT: 12;
   }
 }
 
-
+.grid_noPad {
+  .grid-col + .grid-col {
+    margin-top: 0;
+  }
+}
