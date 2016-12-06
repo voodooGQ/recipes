@@ -75,6 +75,7 @@ class Query {
             'post_type'         => $recipe->getPostTypeSlug(),
             'post_status'       => array('publish'),
             'posts_per_page'    => 1,
+            'orderby'          => 'rand',
             'cat'               => $categoryId
         ));
 

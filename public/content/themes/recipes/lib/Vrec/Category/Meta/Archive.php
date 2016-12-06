@@ -32,8 +32,8 @@ class Archive extends MetaParent {
 
         foreach($categories as $category) {
             if($category->slug === 'uncategorized') { continue; }
-
-            $query = Query::randomRecipeByCategory($category->ID);
+//            var_dump($category);
+            $query = Query::randomRecipeByCategory($category->term_id);
             $recipe = new Recipe();
             $recipe = $recipe->getTwigData($query->posts[0]);
 
