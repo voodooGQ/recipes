@@ -57,7 +57,6 @@ class Controller implements TwigInterface
 
             $twigData['title']                      = $meta->getPostTitle();
             $twigData['featured_image_src']         = $imageMeta['urls']['hero'];
-            $twigData['featured_image_src_mobile']  = $imageMeta['urls']['hero_mobile'];
             $twigData['content']                    = $meta->getPostContent();
         }
         return $twigData;
