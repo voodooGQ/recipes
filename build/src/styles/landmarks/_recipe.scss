@@ -1,0 +1,37 @@
+.recipe-meta {
+  font-size: 14px;
+  @include breakpoint(MD) {
+    font-size: 18px;
+  }
+}
+
+.timeMeta {
+  display: inline;
+  font: $FONT;
+  li {
+    display: inline;
+    &:before {
+      content: '|';
+    }
+    &:first-child {
+      &:before {
+        content: '';
+      }
+    }
+  }
+}
+
+.time-icon {
+  font-size: 20px !important;
+  padding-right: 10px;
+}
+
+.yield-icon {
+  font-size: 15px !important;
+  padding-right: 15px;
+}
+
+.author-icon {
+  font-size: 18px !important;
+  padding-right: 13px;
+}

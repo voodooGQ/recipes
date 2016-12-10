@@ -37,16 +37,38 @@
             {% endif %}
         {% endfor %}
     {% endif %}
-    {% if original_author %}
-        <div class="author">
-            Original Author:
-            {% if original_author.url %}
-                <a href="{{ original_author.url }}" target="_blank">
+    <hr class="hr vr" />
+    <div class="recipe-meta">
+        {% if original_author.url or original_author.name %}
+            <div class="author vr_half">
+                <span class="fa fa-user-circle author-icon"></span>Original Author:
+                {% if original_author.url %}
+                    <a href="{{ original_author.url }}" target="_blank">
+                        {{ original_author.name }}
+                    </a>
+                {% elseif original_author.name %}
                     {{ original_author.name }}
-                </a>
-            {% elseif original_author.name %}
-                {{ original_author.name }}
-            {% endif %}
+                {% endif %}
+            </div>
+        {% endif %}
+        <div class="vr_half">
+            <span class="time-icon fa fa-clock-o"></span>
+            <ul class="timeMeta">
+                {% if prep_time %}
+                    <li><span>Prep:</span> {{ prep_time }}</li>
+                {% endif %}
+                {% if inactive_time %}
+                    <li><span>Inactive:</span> {{ inactive_time }}</li>
+                {% endif %}
+                {% if cook_time %}
+                    <li><span>Cook:</span> {{ cook_time }}</li>
+                {% endif %}
+            </ul>
         </div>
-    {% endif %}
+        {% if yield %}
+            <span class="yield">
+                <span class="fa fa-shopping-basket yield-icon"></span>{{ yield }}
+            </span>
+        {% endif %}
+    </div>
 </div>
