@@ -7,7 +7,7 @@
 #
 # Host: recipes.dev (MySQL 5.7.16-0ubuntu0.16.04.1)
 # Database: recipes
-# Generation Time: 2016-12-10 21:06:36 +0000
+# Generation Time: 2016-12-11 00:18:16 +0000
 # ************************************************************
 
 
@@ -580,7 +580,7 @@ VALUES
 	(319,4,'_wp_trash_meta_time','1481402376'),
 	(320,4,'_wp_desired_post_slug','sample-page-2'),
 	(321,41,'_edit_last','1'),
-	(322,41,'_edit_lock','1481403225:1'),
+	(322,41,'_edit_lock','1481412401:1'),
 	(323,41,'_wp_page_template','default'),
 	(324,43,'_menu_item_type','post_type'),
 	(325,43,'_menu_item_menu_item_parent','0'),
