@@ -10,3 +10,4 @@ core/*
 !core/.gitkeep
 html
 content/debug.log
+log
