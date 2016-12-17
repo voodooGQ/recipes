@@ -15,7 +15,7 @@
                     <ul class="list-ingredients vr">
                         {% for item in section.ingredients %}
                             <li>
-                                {{ item.quantity }} {{ item.measurement }} {{ item.ingredient }}
+                                {{ item.quantity }} {{ item.range ? " to #{item.range}" : '' }} {{ item.measurement }} {{ item.ingredient }}
                             </li>
                         {% endfor %}
                     </ul>

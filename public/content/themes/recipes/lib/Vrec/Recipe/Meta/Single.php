@@ -152,6 +152,10 @@ class Single extends MetaParent {
                             get_sub_field('quantity'),
                             get_sub_field('measurement')
                         );
+                        $ingredient['range'] = $this->quantityConversion(
+                            get_sub_field('range'),
+                            get_sub_field('measurement')
+                        );
                         $ingredient['measurement'] = $this->measurementConversion(
                             get_sub_field('quantity'),
                             get_sub_field('measurement')
