@@ -15,7 +15,7 @@ define('TWIG_TEMPLATE_DIR', 'twig');
  * in the General Settings of wp-admin.
  */
 define('WP_HOME', 'http://recipes.dev');
-define('WP_SITEURL', WP_HOME);
+define('WP_SITEURL', WP_HOME . '/core');
 
 /**
  * Content directory and URL.
